@@ -13,15 +13,15 @@ const config = require("./config.json");
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
+  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} server.`);
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+  client.user.setActivity(`On ${client.guilds.size} server(s)`);
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
-  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+  console.log(`New server joined: ${guild.name} (id: ${guild.id}). This server has ${guild.memberCount} members!`);
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
