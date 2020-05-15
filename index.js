@@ -58,7 +58,7 @@ client.on("message", async message => {
   // Let's go with a few common example commands! Feel free to delete or change those.
   if (!message.guild) return;
   
-  if (message.content === '/join') {
+  if (message.content === 'join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voice.channel) {
       const connection = await message.member.voice.channel.join();
