@@ -1,3 +1,5 @@
+// Referencing https://gist.github.com/eslachance/3349734a98d30011bb202f47342601d3 as a boilerplate and adding more on top of it
+
 // Load up the discord.js library
 const Discord = require("discord.js");
 
@@ -64,6 +66,22 @@ client.on("message", async message => {
       const connection = await message.member.voice.channel.join();
     } else {
       message.reply('You need to join a voice channel first!');
+    }
+  }
+
+
+
+  if(message.content === 'music'){
+    if (message.member.voice.channel) {
+        try{
+            const connection = await message.member.voice.channel.join();
+            // connection.play('http://www.sample-videos.com/audio/mp3/wave.mp3',{ volume: 0.5 })
+            connection.play('https://ia802508.us.archive.org/5/items/testmp3testfile/mpthreetest.mp3');
+        }catch(e){
+            console.log("Failed to play music, error: " + e)
+        }
+    } else {
+        message.reply('You need to join a voice channel first!');
     }
   }
 });
