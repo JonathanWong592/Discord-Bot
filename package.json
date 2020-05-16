@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/JonathanWong592/Discord-Bot#readme",
   "dependencies": {
-    "discord.js": "^11.6.3",
+    "discord.js": "github:discordjs/discord.js#master",
+    "discord.js-commando": "github:discordjs/Commando",
     "ffmpeg-static": "^4.2.1",
     "nodemon": "^2.0.4"
   },
