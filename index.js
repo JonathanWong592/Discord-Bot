@@ -55,7 +55,6 @@ client.on("message", async message => {
 
 //   console.log(message.content.split('+'))
   message.content = message.content.split('+')[1]
-    // console.log(message.content)
   // Let's go with a few common example commands! Feel free to delete or change those.
   if (!message.guild) return;
   
